@@ -1,0 +1,80 @@
+<html>
+<head>
+	<title>Pixel Perfect Demo</title>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+	
+	<!-- THE DEMO INCLUDE -->
+	<link rel="stylesheet" type="text/css" href="demo.css" />
+	<!-- THE DEMO INCLUDE -->
+
+	<!-- THE SCRIPT INCLUDES -->
+	<link rel="stylesheet" type="text/css" href="../src/pixel-perfect.css" />
+	<script src="../src/pixel-perfect.js" type="text/javascript" charset="utf-8"></script>
+	<!-- THE SCRIPT INCLUDES -->
+
+</head>
+<body>
+
+	<header>
+
+		<h1> 
+			<span class="first">pixel</span>
+			<img src="logo.png" alt="Pixel Perfect Javascript Plugin" />
+			<span class="second">perfect</span>
+		</h1>
+
+		<img src="arrow.png" title="show the preview" id="arrow" />
+
+
+	</header>
+
+	<section>
+		<h2>A Javascript plugin to help you building<br />pixel perfect websites.</h2>
+
+
+		<div class="content">
+			<div class="box black"></div>
+			<div class="box green"></div>
+			<div class="box blue"></div>
+			<div class="box orange"></div>
+			<div class="box black"></div>
+		</div>
+
+	</section>
+	<section>
+		<p>You need just an image with your website preview...</p>		
+		<img class="thumb_img" src="test_thumb.png" />
+
+		<p>...and this line of code: </p>		
+		<pre><code>
+	pixelperfect.init( { 
+	    image: "/test.jpg",
+	    opacity: .5
+	} );
+		</code></pre>
+
+	</section>
+		
+	
+	<script>
+
+		// EXAMPLE USAGE
+		pixelperfect.init( { 
+		    image: "test.jpg",
+		    opacity: .5
+		} );
+
+	</script>
+
+	<script>
+		window.onscroll = function(e) {
+			if( document.body.scrollTop < 50 ){
+				classie.addClass( arrow, "visible" );
+			} else {
+				classie.removeClass( arrow, "visible" );
+			}
+		}
+	</script>
+
+</body>
+</html>

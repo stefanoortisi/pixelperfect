@@ -1,0 +1,102 @@
+.pixelperfect-btn {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	z-index: 101;
+
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	font-size: 0;
+	padding: 9px 13px;
+
+	background: #17aa56;
+	color: #fff;
+	border-radius: 7px;
+	box-shadow: 0 5px #119e4d;
+	overflow: hidden;
+	text-indent: -9999px
+}
+
+.pixelperfect-btn-span {
+	display: block;
+	z-index: 1;
+	width: 29px;
+	height: 29px;
+	background: url(icon.png);
+	margin: 0 auto;
+	position: relative;
+	opacity: 0.8;
+}
+
+.pixelperfect-btn:hover .pixelperfect-btn-span {
+	opacity: 1
+}
+
+.pixelperfect-btn:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	z-index: 0;
+	width: 100%;
+	border-radius: 7px;
+	background: #0a833d;
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.pixelperfect-btn.activated:after {
+	opacity: 1;
+}
+
+.pixelperfect-btn.activated .pixelperfect-btn-span {
+	opacity: 1;	
+}
+
+
+
+
+.pixelperfect-image {
+	position: absolute;
+	z-index: 100;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+
+.pixelperfect-image.align-center {
+	left: 50%;
+}
+
+
+
+.pixelperfect-image.activated {
+	display:block;
+}
+
+/* DAT GUI STYLE */
+.pixelperfect-dat.dg.ac {
+	z-index: 101;
+}
+.pixelperfect-dat .dg.a {
+	float: left;
+	margin-left: 15px;
+}

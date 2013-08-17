@@ -169,6 +169,18 @@ code {
 	border-radius: 10px;
 }
 
+.download_link {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	margin: 20px 0 70px;
+}
+
+.download_link:hover {
+	text-decoration: underline;
+}
+
 .black{ background: #242424; }
 .green{ background: #17aa56; }
 .blue{ background: #006ecc; }

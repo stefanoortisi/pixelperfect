@@ -25,4 +25,4 @@ or
 	} );
 
 
-Check out the [Demo](http://ortisi.co.uk/pixelperfect/) for example usage
+Check out the [Demo](stefanoortisi.github.io/pixelperfect/demo/) for example usage

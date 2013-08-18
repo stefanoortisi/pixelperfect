@@ -21,30 +21,8 @@ var pixelperfect = function() {
 
     var image, toggle_button, original_overflow;
 
-    function load_file(filename, filetype){
-        console.log( "load_file", filename );
-        var fileref;
-        if (filetype=="js"){
-            fileref=document.createElement('script');
-            fileref.setAttribute("type","text/javascript");
-            fileref.setAttribute("src", filename);
-        }
-        else if (filetype=="css"){ 
-            fileref=document.createElement("link");
-            fileref.setAttribute("rel", "stylesheet");
-            fileref.setAttribute("type", "text/css");
-            fileref.setAttribute("href", filename);
-        }
-        
-        if ( typeof fileref != "undefined" ) {
-            document.getElementsByTagName("head")[0].appendChild( fileref )
-        }
-            
-    }
-
     function merge_options(obj1,obj2){
 
-        console.log( pixelperfect );
         var obj3 = {};
         for (var attrname in obj1) { obj3[attrname] = obj1[attrname]; }
         for (var attrname in obj2) { obj3[attrname] = obj2[attrname]; }
@@ -89,7 +67,6 @@ var pixelperfect = function() {
 
             if( defaults.align === "center" ){
                 classie.addClass( image, "align-center" );
-                console.log( "image width", image.width );
                 image.style.marginLeft = - ( image.width / 2 ) + "px"
             }
 
@@ -129,6 +106,46 @@ var pixelperfect = function() {
 
 
             defaults = merge_options( defaults, options );
+
+            defaults.dat_gui = typeof dat != "undefined"
+
+            if( defaults.dat_gui ){
+                create_gui();
+            }
+
+            add_ui( function() { 
+                pixelperfect.set_opacity( defaults.opacity );
+            });
+            
+        },
+
+        toggle: function( ) {
+    
+            classie.toggle( image, "activated");
+            if( !defaults.dat_gui ){
+                classie.toggle( toggle_button, "activated");    
+            }
+            
+
+            if( defaults.visible ) {
+                document.body.style.overflow = "hidden";
+            } else {
+                document.body.style.overflow = original_overflow;
+            }
+
+        },
+
+        set_opacity: function( value ) {
+            image.style.opacity = value
+        }
+
+        
+    };
+
+}();
+
+
+ults, options );
 
             defaults.dat_gui = typeof dat != "undefined"
 

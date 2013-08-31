@@ -26,3 +26,6 @@ or
 
 
 Check out the [Demo](http://stefanoortisi.github.io/pixelperfect/demo/) for example usage
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/stefanoortisi/pixelperfect/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
